@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Page</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            margin: 0;
+            background-color: red;
+            background-image: linear-gradient(rgb(80, 150, 255), rgb(167, 211, 252));
+        }
+
+        .login-container {
+            background: #fff;
+            padding: 40px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            width: 300px;
+        }
+        .login-container h2 {
+            margin-bottom: 20px;
+            color: #333;
+        }
+        .login-container input[type="email"],
+        .login-container input[type="password"],
+        .login-container button {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            box-sizing: border-box;
+        }
+        .login-container input[type="submit"],
+        .login-container button {
+            width: 100%;
+            padding: 10px;
+            margin-top: 20px;
+            border: none;
+            border-radius: 5px;
+            background: #4b4b49;
+            color: white;
+            cursor: pointer;
+        }
+        .login-container input[type="submit"]:hover,
+        .login-container button:hover {
+            background: #2a2a29;
+        }
+        .login-container a {
+            display: inline-block;
+            margin-top: 20px;
+            color: #4b4b49;
+            text-decoration: none;
+        }
+        .login-container a:hover {
+            text-decoration: underline;
+        }
+        .login-container .checkbox {
+            margin: 20px 0;
+        }
+   
+        .face-id-btn {
+            background: #4a90e2;
+            margin-bottom: 10px;
+        }
+        .face-id-btn:hover {
+            background: #357ab8;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="login-container">
+        <h2>Log In</h2>
+        <form action="/perform_login" method="post">
+            <input type="email" placeholder="Email" name="email" required>
+            <input type="password" placeholder="Password" name="password" required>
+            <div class="checkbox">
+                <label>
+                    <input type="checkbox" name="remember"> Remember Me
+                </label>
+            </div>
+            <button type="button" class="face-id-btn">Face ID</button>
+            <input type="submit" value="Submit">
+            <a href="#">Forgot Password</a>
+        </form>
+    </div>
+    <script type="module">
+      import { initializeApp } from "https://www.gstatic.com/firebasejs/10.11.0/firebase-app.js";
+      import { getAnalytics } from "https://www.gstatic.com/firebasejs/10.11.0/firebase-analytics.js";
+      const firebaseConfig = {
+        apiKey: "AIzaSyBogzxg8Dhel0Xk2TsbiK_5VYd_LONzQSk",
+        authDomain: "mhhs-a84fc.firebaseapp.com",
+        projectId: "mhhs-a84fc",
+        storageBucket: "mhhs-a84fc.appspot.com",
+        messagingSenderId: "839290099449",
+        appId: "1:839290099449:web:41d0b33a561af743fdb428",
+        measurementId: "G-PVL5PHV20E"
+      };
+      const app = initializeApp(firebaseConfig);
+      const analytics = getAnalytics(app);
+    </script>
+</body>
+</html>

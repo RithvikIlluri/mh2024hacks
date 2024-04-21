@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign Up Page</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            margin: 0;
+            background-color: red;
+            background-image: linear-gradient(rgb(80, 150, 255), rgb(167, 211, 252));
+        }
+        .signup-container {
+            background: #fff;
+            padding: 40px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            width: 300px;
+        }
+        .signup-container h2 {
+            margin-bottom: 20px;
+            color: #333;
+        }
+        .signup-container input[type="text"],
+        .signup-container input[type="email"],
+        .signup-container input[type="password"] {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            box-sizing: border-box;
+        }
+        .signup-container input[type="submit"] {
+            width: 100%;
+            padding: 10px;
+            margin-top: 20px;
+            border: none;
+            border-radius: 5px;
+            background: #4b4b49;
+            color: white;
+            cursor: pointer;
+        }
+        .signup-container input[type="submit"]:hover {
+            background: #2a2a29;
+        }
+        .signup-container a {
+            display: inline-block;
+            margin-top: 20px;
+            color: #4b4b49;
+            text-decoration: none;
+        }
+        .signup-container a:hover {
+            text-decoration: underline;
+        }
+        .signup-container .checkbox {
+            margin: 20px 0;
+        }
+    </style>
+</head>
+<body>
+    <div class="signup-container">
+        <h2>Sign Up</h2>
+        <form action="/perform_signup" method="post">
+            <input type="text" placeholder="Full Name" name="fullname" required>
+            <input type="email" placeholder="Email" name="email" required>
+            <input type="password" placeholder="Password" name="password" required>
+            <input type="password" placeholder="Confirm Password" name="confirm_password" required>
+            <div class="checkbox">
+                <label>
+                    <input type="checkbox" name="terms"> I agree to the Terms and Conditions
+                </label>
+            </div>
+            <input type="submit" value="Submit">
+            <input type="submit" value="Sign up with Face ID">
+            <a href="login.html">Already have an account?</a>
+        </form>
+    </div>
+</body>
+</html>

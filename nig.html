@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Addition Calculator</title>
+</head>
+<body>
+    <h1>Addition Calculator</h1>
+    <label for="num1">First Number:</label>
+    <input type="number" id="num1"><br><br>
+    <label for="num2">Second Number:</label>
+    <input type="number" id="num2"><br><br>
+    <button onclick="calculateSum()">Calculate Sum</button>
+    <p id="result"></p>
+
+    <script>
+        function calculateSum() {
+            const num1 = parseFloat(document.getElementById("num1").value);
+            const num2 = parseFloat(document.getElementById("num2").value);
+            const sum = num1 + num2;
+            document.getElementById("result").innerHTML = "The sum is: " + sum;
+        }
+    </script>
+</body>
+</html>
