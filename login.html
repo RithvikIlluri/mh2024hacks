@@ -88,7 +88,7 @@
                     <input type="checkbox" name="remember"> Remember Me
                 </label>
             </div>
-            <button type="button" class="face-id-btn">Face ID</button>
+            <button type="button" id='script' value = " Run Script " onclick="gopython()" class="face-id-btn">Face ID</button>
             <input type="submit" value="Submit">
             <a href="#">Forgot Password</a>
         </form>
@@ -107,6 +107,16 @@
       };
       const app = initializeApp(firebaseConfig);
       const analytics = getAnalytics(app);
+    </script>
+    <script>
+        function gopython(){
+            $.ajax({
+              url: "app.py",
+             context: document.body
+            }).done(function() {
+             alert('finished python script');;
+            });
+        }
     </script>
 </body>
 </html>
